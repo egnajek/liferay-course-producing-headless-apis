@@ -53,7 +53,7 @@
         "readOnly": "false",
         "readOnlyConditionExpression": "",
         "relationshipType": "oneToMany",
-        "required": false,
+        "required": true,
         "state": false,
         "system": false,
         "type": "Long",
