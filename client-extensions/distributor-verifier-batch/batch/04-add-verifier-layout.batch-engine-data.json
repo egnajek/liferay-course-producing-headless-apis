@@ -62,7 +62,7 @@
 								{
 									"objectLayoutColumns": [
 										{
-											"objectFieldName": "applicationState",
+											"objectFieldName": "kYCVerificationState",
 											"priority": 0,
 											"size": 6
 										},
