@@ -46,7 +46,7 @@ import org.springframework.web.client.RestTemplate;
  *
  * @author dnebinger
  */
-@RequestMapping(PLACEHOLDER)
+@RequestMapping("PLACEHOLDER")
 @RestController
 public class DistributorKYCUpdateController extends BaseRestController {
 
