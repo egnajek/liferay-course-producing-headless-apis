@@ -24,12 +24,12 @@ public class DistributorKYCVerification {
 		return _businessName;
 	}
 
-	public String getBusinessTaxID() {
-		return _businessTaxID;
+	public String getSubmittedBusinessEIN() {
+		return _submittedBusinessEIN;
 	}
 
-	public String getValidatedTaxID() {
-		return _validatedTaxID;
+	public String getValidatedBusinessEIN() {
+		return _validatedBusinessEIN;
 	}
 
 	public String getBusinessType() {
@@ -74,12 +74,12 @@ public class DistributorKYCVerification {
 		_businessName = businessName;
 	}
 
-	public void setBusinessTaxID(String businessTaxID) {
-		_businessTaxID = businessTaxID;
+	public void setSubmittedBusinessEIN(String submittedBusinessEIN) {
+		_submittedBusinessEIN = submittedBusinessEIN;
 	}
 
-	public void setValidatedTaxID(String validatedTaxID) {
-		_validatedTaxID = validatedTaxID;
+	public void setValidatedBusinessEIN(String validatedBusinessEIN) {
+		_validatedBusinessEIN = validatedBusinessEIN;
 	}
 
 	public void setBusinessType(String businessType) {
@@ -148,7 +148,9 @@ public class DistributorKYCVerification {
 		).put(
 			"businessName", getBusinessName()
 		).put(
-			"validatedTaxID", getValidatedTaxID()
+			"submittedBusinessEIN", getSubmittedBusinessEIN()
+		).put(
+			"validatedBusinessEIN", getValidatedBusinessEIN()
 		).put(
 			"businessType", getBusinessType()
 		).put(
@@ -196,8 +198,8 @@ public class DistributorKYCVerification {
 	private String _applicationState;
 	private String _businessAddress;
 	private String _businessName;
-	private String _businessTaxID;
-	private String _validatedTaxID;
+	private String _submittedBusinessEIN;
+	private String _validatedBusinessEIN;
 	private String _businessType;
 	private String _externalReferenceCode;
 	private String _kYCResponse;
