@@ -37,7 +37,7 @@
 											"size": 6
 										},
 										{
-											"objectFieldName": "businessTaxIDNumber",
+											"objectFieldName": "submittedBusinessEIN",
 											"priority": 0,
 											"size": 6
 										}

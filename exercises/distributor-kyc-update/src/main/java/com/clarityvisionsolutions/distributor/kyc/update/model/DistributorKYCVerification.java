@@ -24,8 +24,12 @@ public class DistributorKYCVerification {
 		return _businessName;
 	}
 
-	public String getBusinessTaxIDNumber() {
-		return _businessTaxIDNumber;
+	public String getBusinessTaxID() {
+		return _businessTaxID;
+	}
+
+	public String getValidatedTaxID() {
+		return _validatedTaxID;
 	}
 
 	public String getBusinessType() {
@@ -70,8 +74,12 @@ public class DistributorKYCVerification {
 		_businessName = businessName;
 	}
 
-	public void setBusinessTaxIDNumber(String businessTaxIDNumber) {
-		_businessTaxIDNumber = businessTaxIDNumber;
+	public void setBusinessTaxID(String businessTaxID) {
+		_businessTaxID = businessTaxID;
+	}
+
+	public void setValidatedTaxID(String validatedTaxID) {
+		_validatedTaxID = validatedTaxID;
 	}
 
 	public void setBusinessType(String businessType) {
@@ -140,7 +148,7 @@ public class DistributorKYCVerification {
 		).put(
 			"businessName", getBusinessName()
 		).put(
-			"businessTaxIDNumber", getBusinessTaxIDNumber()
+			"validatedTaxID", getValidatedTaxID()
 		).put(
 			"businessType", getBusinessType()
 		).put(
@@ -188,7 +196,8 @@ public class DistributorKYCVerification {
 	private String _applicationState;
 	private String _businessAddress;
 	private String _businessName;
-	private String _businessTaxIDNumber;
+	private String _businessTaxID;
+	private String _validatedTaxID;
 	private String _businessType;
 	private String _externalReferenceCode;
 	private String _kYCResponse;

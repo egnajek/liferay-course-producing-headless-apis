@@ -18,7 +18,7 @@
         "name": "Under Review"
       },
       "businessName": "Eye Spy Ltd.",
-      "businessTaxIDNumber": "32-4953459",
+      "submittedBusinessEIN": "32-4953459",
       "businessType": "Limited Partnership",
       "kYCStatus": "Submitted",
       "r_applicationToKYC_c_distributorApplicationERC": "APPLICATION_EYE_SPY"
@@ -31,7 +31,7 @@
         "name": "Under Review"
       },
       "businessName": "Neu Vue Optical",
-      "businessTaxIDNumber": "98-3423419",
+      "submittedBusinessEIN": "98-3423419",
       "businessType": "Sole Proprietorship",
       "kYCStatus": "Submitted",
       "r_applicationToKYC_c_distributorApplicationERC": "APPLICATION_NEU_VEU"
@@ -44,7 +44,7 @@
         "name": "Under Review"
       },
       "businessName": "Fab Frames",
-      "businessTaxIDNumber": "65-3984531",
+      "submittedBusinessEIN": "65-3984531",
       "businessType": "Partnership",
       "kYCStatus": "Submitted",
       "r_applicationToKYC_c_distributorApplicationERC": "APPLICATION_FAB_FRAMES"

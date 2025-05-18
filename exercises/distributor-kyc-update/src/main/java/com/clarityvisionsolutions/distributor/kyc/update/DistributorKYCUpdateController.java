@@ -195,8 +195,8 @@ public class DistributorKYCUpdateController extends BaseRestController {
 			distributorApplication.getExternalReferenceCode());
 		distributorKYCVerification.setBusinessName(
 			distributorApplication.getBusinessName());
-		distributorKYCVerification.setBusinessTaxIDNumber(
-			distributorApplication.getBusinessTaxIDNumber());
+		distributorKYCVerification.setValidatedBusinessEIN(
+			distributorApplication.getSubmittedBusinessEIN());
 		distributorKYCVerification.setBusinessType(
 			kycResponse.getIndustryClassification());
 		distributorKYCVerification.setKYCStatus(
