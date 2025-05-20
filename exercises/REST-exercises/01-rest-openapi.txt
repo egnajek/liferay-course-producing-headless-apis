@@ -1,0 +1,16 @@
+components:
+    schemas:
+        AbbreviatedDistributorApp:
+            properties:
+                businessName:
+                    type: string
+                erc:
+                    type: string
+                id:
+                    format: int64
+                    type: integer
+                kycStatus:
+                    type: string
+                taxId:
+                    type: string
+            type: object
