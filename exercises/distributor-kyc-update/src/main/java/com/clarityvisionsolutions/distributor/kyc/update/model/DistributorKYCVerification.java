@@ -116,6 +116,11 @@ public class DistributorKYCVerification {
 			r_applicationToKYC_c_distributorApplicationId;
 	}
 
+	/**
+	 * Method to convert the instance to JSON.
+	 *
+	 * @return JSON object
+	 */
 	public JSONObject toJSON() {
 		JSONObject jsonObject = new JSONObject();
 
@@ -170,6 +175,11 @@ public class DistributorKYCVerification {
 		return jsonObject;
 	}
 
+	/**
+	 * Inner class for Permission.
+	 *
+	 * @author dnebinger
+	 */
 	public static class Permission {
 
 		public List<String> getActionIds() {
