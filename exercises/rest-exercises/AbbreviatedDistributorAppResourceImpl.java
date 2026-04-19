@@ -14,6 +14,7 @@ import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.search.filter.BooleanFilter;
+import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
 
 import java.lang.reflect.Method;
@@ -174,34 +175,26 @@ public class AbbreviatedDistributorAppResourceImpl
 		throws Exception {
 
 		try {
+			ObjectDefinition objectDefinition = _objectDefinitionLocalService.getObjectDefinition(contextCompany.getCompanyId(), oerSimpleName);
+        	
 			ObjectEntryResource objectEntryResource =
 				_objectEntryResourceServiceTrackerMap.getService(
 					StringBundler.concat(
-						ObjectEntry.class.getName(), StringPool.POUND, oerKey));
+						ObjectEntry.class.getName(), StringPool.POUND, StringUtil.toLowerCase(
+							objectDefinition.getShortName())));
+
 
 			// update the entity we got with the context information.
-
 			objectEntryResource.setContextAcceptLanguage(contextAcceptLanguage);
 			objectEntryResource.setContextCompany(contextCompany);
 			objectEntryResource.setContextUser(contextUser);
-
-			// load up the object definition
-
-			String objDefnName = oerSimpleName;
-
-			ObjectDefinition objDefn =
-				_objectDefinitionLocalService.fetchObjectDefinition(
-					contextCompany.getCompanyId(), objDefnName);
-
-			// use reflection to set the object definition
-			// on the object entry resource
 
 			Class<?> clazz = objectEntryResource.getClass();
 
 			Method method = clazz.getMethod(
 				"setObjectDefinition", ObjectDefinition.class);
 
-			method.invoke(objectEntryResource, objDefn);
+			method.invoke(objectEntryResource, objectDefinition);
 
 			return objectEntryResource;
 		}
